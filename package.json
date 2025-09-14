@@ -1,0 +1,19 @@
+{
+  "name": "scratch-computer",
+  "version": "0.0.0",
+  "description": "A scratch-based computer with the mission of creating a fast and responsive virtual machine, including user input and rendering.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thoxbox/scratch-computer.git"
+  },
+  "author": "thoxbox",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thoxbox/scratch-computer/issues"
+  },
+  "homepage": "https://github.com/thoxbox/scratch-computer#readme"
+}
