@@ -5,14 +5,13 @@ This project uses [lascra](https://github.com/bit-turtle/lascra) which compiles 
 # Build
 
 ## Before your first build
-1. Create a new project in Scratch for this.
-2. Export the "Sprite1" sprite and put the file into `this-repository/build/Sprite1.sprite3`
-
-(The file `build/Sprite1.sprite3` is .gitignore'd to make the repository less large.)
+1. Go to [lascra's releases](https://github.com/bit-turtle/lascra/releases) and get the most recent build for your operating system. Place the file into `this-repository/build`. Make sure to do this again when newer versions are added.
+2. Create a new project in Scratch for this.
+3. Export the "Sprite1" sprite and put the file into `this-repository/build`
 
 ## Steps
 1. Run `node ./src/index.js`
 2. Delete all existing sprites in the project.
 3. From the "Choose a sprite" menu in Scratch, choose "Upload Sprite".
-4. Navigate into `this-repository/build/sprite.sprite3`. Confirm your upload.
+4. Navigate into `this-repository/build`. Confirm your upload.
 5. Run the project!
