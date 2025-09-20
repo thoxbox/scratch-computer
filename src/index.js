@@ -2,11 +2,10 @@ const fs = require("fs");
 const child_process = require("child_process");
 
 function outputCode(code) {
-    const root = "C:\\Users\\Ann\\Downloads\\Websites\\lascra-project\\build\\";
-    fs.writeFileSync(`${root}output.scra`, code, "utf-8");
+    fs.writeFileSync(`build\\output.scra`, code, "utf-8");
     child_process.exec(
-        `${root}lascra ${root}Sprite1.sprite3 ${root}output.scra`
-    );
+        `lascra Sprite1.sprite3 output.scra`
+        , { cwd: "build" });
 }
 
 outputCode(`(when flag
