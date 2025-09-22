@@ -1,4 +1,4 @@
-import outputCode from "../src/outputCode.js";
+import outputCode from "./outputCode.js";
 
 function lc_switch(value, against) {
     const entries = Object.entries(against);
