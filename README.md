@@ -10,7 +10,7 @@ This project uses [lascra](https://github.com/bit-turtle/lascra) which compiles 
 3. Export the "Sprite1" sprite and put the file into `this-repository/build`
 
 ## Steps
-1. Run `node ./src/index.js`
+1. Run `node index.js` (Ensure you are running the terminal in the `src` folder)
 2. Delete all existing sprites in the project.
 3. From the "Choose a sprite" menu in Scratch, choose "Upload Sprite".
 4. Navigate into `this-repository/build`. Confirm your upload.
