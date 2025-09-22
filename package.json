@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "description": "A scratch-based computer with the mission of creating a fast and responsive virtual machine, including user input and rendering.",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
