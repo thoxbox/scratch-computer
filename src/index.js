@@ -1,4 +1,5 @@
 import outputCode from "./outputCode.js";
+import Top from "./Top.js";
 
 function lc_switch(value, against) {
     return Object.entries(against)
@@ -12,20 +13,19 @@ function lc_switch(value, against) {
         .join("\n");
 }
 
-outputCode(`
-(define
+Top.definition(`
     (variable pc 1)
     (list registers)
     (list memory
         "halt"
     )
-)
-(procedure run_instruction (run_instruction (string instruction))
+`);
+Top.procedure("run_instruction", "(string instruction)", `
     ${lc_switch("(argument instruction)", {
         halt: "(stop all)",
     })}
-)
-(procedure run_program (run_program)
+`);
+Top.procedure("run_program", "", `
     (delete_all registers)
     (repeat 16
         (add "" registers)
@@ -34,5 +34,5 @@ outputCode(`
     (forever
         (call run_instruction (item (variable pc) memory))
     )
-)
 `);
+outputCode(Top.output());
