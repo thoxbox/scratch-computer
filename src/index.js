@@ -12,6 +12,12 @@ function lc_switch(value, against) {
         })
         .join("\n");
 }
+function lc_broadcast_switch(value, against, wait = false) {
+    Object.entries(against).forEach((x) => {
+        Top.broadcast(x[0], x[1]);
+    });
+    return `(${wait ? "broadcast_wait" : "broadcast"} ${value})`;
+}
 
 Top.definition(`
     (variable pc 1)
@@ -20,11 +26,6 @@ Top.definition(`
         "halt"
     )
 `);
-Top.procedure("run_instruction", "(string instruction)", `
-    ${lc_switch("(argument instruction)", {
-        halt: "(stop all)",
-    })}
-`);
 Top.procedure("run_program", "", `
     (delete_all registers)
     (repeat 16
@@ -32,7 +33,9 @@ Top.procedure("run_program", "", `
     )
     (set pc 1)
     (forever
-        (call run_instruction (item (variable pc) memory))
+        ${lc_broadcast_switch("(item (variable pc) memory)", {
+            halt: "(stop all)",
+        })}
     )
 `);
 outputCode(Top.output());

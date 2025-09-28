@@ -2,7 +2,7 @@ class Top {
     static top = "";
     static define = "";
     static broadcast(name, code) {
-        this.top += `(when (received ${name}))
+        this.top += `(when (received ${name})
             ${code}
         )`;
         this.define += `(broadcast ${name})`;
